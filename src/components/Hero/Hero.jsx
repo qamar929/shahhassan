@@ -3,6 +3,7 @@ import css from './Hero.module.css'
 import heroImg from '../../assets/hero.png'
 import {RiShoppingBagFill} from 'react-icons/ri'
 import {BsArrowRight} from 'react-icons/bs'
+
 const Hero = () => {
   return (
     <div className={css.container}>
@@ -32,7 +33,11 @@ const Hero = () => {
         <RiShoppingBagFill/>
 
         <div className={css.signup}>
-             <span>Best SignUp Offers</span>
+
+
+  <span >Best SignUp Offers</span> 
+           
+            
         
 
             <div>
