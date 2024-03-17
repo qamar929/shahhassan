@@ -4,9 +4,9 @@ import Shade from '../../assets/shade.png'
 import Before from '../../assets/before.png'
 import After from '../../assets/after.png'
 import ReactCompareImage from "react-compare-image"
-const Virtual = () => {
+const Virtual = (props) => {
   return (
-    <div className={css.Virtual}>
+    <div ref={props.services} className={css.Virtual}>
 
         <div className={css.left}>
 

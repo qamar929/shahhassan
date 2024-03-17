@@ -1,23 +1,30 @@
 import "./App.css";
-import Hero from "./components/Hero/Hero";
-import Slider from "./components/Slider/Slider";
-import Header from "./components/header/Header";
-import Virtual from "./components/Virtual/Virtual";
-import Products from "./components/Products/Products";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Footer from "./components/Footer/Footer";
-import SignUp from "./components/Authentication/SignUp";
+import React ,{useState} from 'react'
+
+import { BrowserRouter ,Routes,Route} from "react-router-dom";
+import Admin from "./AdminDashboard/Admin";
+import Aproducts from "./AdminDashboard/Aproducts";
+import Client from "./components/Client";
+
 function App() {
+
+ const [isAdmin, setIsAdmin] = useState(false);
   return (
     <div className="App">
-  <Header/>
-  <Hero/>
-  <SignUp/>
-  <Slider/>
-  <Virtual/>
-  <Products/>
-  <Testimonials/>
-  <Footer/>
+
+
+
+    
+<BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Client/>}/>
+        <Route path="/Admin" element={<Admin/>} /> 
+        <Route path="/admin/Product" element={<Aproducts/>}/>
+
+
+      </Routes>
+      
+    </BrowserRouter>
     </div>
   );
 }

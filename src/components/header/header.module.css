@@ -3,6 +3,11 @@ padding: 1.5rem;
 display: flex;
 
 }
+.stickynav {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 .logo{
     display: flex;
     align-items: center;
@@ -50,3 +55,30 @@ width: 2 rem;
 height: 2 rem;
 
 }
+
+
+@media screen and (max-width: 640px) {
+  
+    .right{
+        position: relative;
+        right: 2rem;
+        z-index: 9999;
+        background-color: white;
+        color: var(--black);
+        border-radius: 5px;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .menu{
+        flex-direction: column;
+        margin-left: -2rem;
+        display: none;
+
+    }
+    .bars{
+      display: none;  
+    }
+    .search{
+        display: none;
+    }
+} 

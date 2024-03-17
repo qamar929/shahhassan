@@ -3,7 +3,7 @@ import css from "./Products.module.css"
 import {ProductsData} from "../../data/products";
 import Plane from "../../assets/plane.png";
 import {useAutoAnimate} from '@formkit/auto-animate/react';
-const Products = () => {
+const Products = (props) => {
 
   const [parent] =useAutoAnimate()
   const [MenuProducts, setMenuProducts] = useState(ProductsData)
@@ -15,7 +15,7 @@ const Products = () => {
  
  console.log(MenuProducts)
   return (
-    <div className={css.container}>
+    <div ref={props.ourProducts} className={css.container}>
       <img src={Plane} alt="" />
       <h1>Our Featured Products</h1>
 

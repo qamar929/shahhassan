@@ -3,9 +3,9 @@ import css from './Testimonials.module.css'
 import Hero from '../../assets/testimonialHero.png'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { TestimonialsData} from "../../data/testimonials"
-const Testimonials = () => {
+const Testimonials = (props) => {
   return (
-    <div className={css.Testimonials}>
+    <div ref={props.aboutUs} className={css.Testimonials}>
         <div className={css.wrapper}>
             
             <div className={css.container}>
